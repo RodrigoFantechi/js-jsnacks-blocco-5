@@ -12,8 +12,9 @@ const nuovoArray = compilatore(larray,numero1,numero2);
 console.log(nuovoArray);
 
 function compilatore(array,primoNumero,secondoNumero) {
-    let nuovoArray = array.filter(numero => {
-        if(numero>primoNumero && numero<secondoNumero){
+
+    let nuovoArray = array.filter((numero,index) => {
+        if(index >primoNumero && index<secondoNumero){
             return true;
         }
         return false;
